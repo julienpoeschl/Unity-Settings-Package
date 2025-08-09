@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6418328875481740915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029830062092145037}
+  - component: {fileID: 8952313775251340072}
+  m_Layer: 0
+  m_Name: Settings Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029830062092145037
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418328875481740915}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8952313775251340072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6418328875481740915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53fb69ead65e6f4b99b60dfb837b693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fov: {fileID: 11400000, guid: 95dd16cb32fccaa428814fa0acf3a4fc, type: 2}
+  fullscreen: {fileID: 11400000, guid: 33ad70978e68d5b43b9ab0e1fc37f5bd, type: 2}
+  masterVolume: {fileID: 11400000, guid: ec275fe6c536f2e4c953c17a01a949d6, type: 2}
+  musicVolume: {fileID: 11400000, guid: 95838e23248004a41b265710c21e9837, type: 2}
+  sfxVolume: {fileID: 11400000, guid: 6b8071a614d96d147a89127b2c33c48a, type: 2}
+  uiVolume: {fileID: 11400000, guid: c81ca672a3c64d94d8fe491d443519ce, type: 2}
+  xInverted: {fileID: 11400000, guid: eaf3460a103a3e1449fcab7d103a8bca, type: 2}
+  yInverted: {fileID: 11400000, guid: 2e4011eedb507d3409da7c9f801ad2ae, type: 2}
+  xsensitivity: {fileID: 11400000, guid: 14c3b78015100a8458d3cf90a398a261, type: 2}
+  ysensitivity: {fileID: 11400000, guid: a908761c4dde0da4c858cda44ffa1834, type: 2}
+  notifyReset: 1
+  notifyPersistency: 1
