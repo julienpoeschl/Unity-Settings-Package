@@ -1,0 +1,15 @@
+{
+  "name": "com.julienpoeschl.settings",
+  "version": "1.0.0",
+  "displayName": "Settings",
+  "description": "A reusable Unity system.",
+  "unity": "6000.0",
+  "dependencies": {
+    
+  },
+  "author": {
+    "name": "Julien Pöschl",
+    "url": "https://github.com/julienpoeschl"
+  }
+}
+

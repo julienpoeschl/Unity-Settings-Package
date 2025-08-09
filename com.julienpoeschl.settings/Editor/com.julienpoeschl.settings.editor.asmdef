@@ -1,0 +1,10 @@
+{
+  "name": "com.julienpoeschl.settings.editor",
+  "references": [
+    "com.julienpoeschl.settings.runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}
