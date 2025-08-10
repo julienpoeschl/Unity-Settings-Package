@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16801cb6618d0354e9fea82ae1d85479, type: 3}
   m_Name: Language
   m_EditorClassIdentifier: 
+  defaultValue: 1
+  notify: 0
   limit:
     Min: 0
     Max: 2
-  defaultValue: 1
-  notify: 0
