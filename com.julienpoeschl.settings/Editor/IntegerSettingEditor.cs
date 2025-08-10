@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Settings
 {
-    [CustomEditor(typeof(FloatSetting))]
-    public class FloatSettingEditor : Editor
+    [CustomEditor(typeof(IntegerSetting))]
+    public class IntegerSettingEditor : Editor
     {
-        private FloatSetting floatSetting;
+        private IntegerSetting integerSetting;
         void OnEnable()
         {
-            floatSetting = (FloatSetting)target;
+            integerSetting = (IntegerSetting)target;
         }
 
         public override void OnInspectorGUI()
@@ -17,25 +17,25 @@ namespace Settings
             serializedObject.Update();
 
             SerializedProperty limit = serializedObject.FindProperty("limit");
-            float min = limit.FindPropertyRelative("Min").floatValue;
-            float max = limit.FindPropertyRelative("Max").floatValue;
+            int min = limit.FindPropertyRelative("Min").intValue;
+            int max = limit.FindPropertyRelative("Max").intValue;
 
-            if (min > max) limit.FindPropertyRelative("Max").floatValue = min;
+            if (min > max) limit.FindPropertyRelative("Max").intValue = min;
 
             EditorGUILayout.PropertyField(limit);
 
             // Draw the defaultValue as a slider with range limit.min to limit.max
             SerializedProperty defaultValue = serializedObject.FindProperty("defaultValue");
-            defaultValue.floatValue = EditorGUILayout.Slider("Default Value", defaultValue.floatValue, min, max);
+            defaultValue.intValue = (int)EditorGUILayout.Slider("Default Value", defaultValue.intValue, min, max);
 
-            EditorGUILayout.LabelField("Current Value", floatSetting.Value.ToString());
+            EditorGUILayout.LabelField("Current Value", integerSetting.Value.ToString());
 
             SerializedProperty notify = serializedObject.FindProperty("notify");
             EditorGUILayout.PropertyField(notify);
 
             if (GUILayout.Button("Set Default"))
             {
-                floatSetting.UseDefault();
+                integerSetting.UseDefault();
             }
 
             serializedObject.ApplyModifiedProperties();
