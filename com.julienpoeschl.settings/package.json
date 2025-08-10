@@ -5,7 +5,8 @@
   "description": "A reusable Unity system.",
   "unity": "6000.0",
   "dependencies": {
-    "com.unity.inputsystem": "1.11.0"
+    "com.unity.inputsystem": "1.11.0",
+    "com.unity.ugui": "1.0.0"
   },
   "author": {
     "name": "Julien P\u00f6schl",
