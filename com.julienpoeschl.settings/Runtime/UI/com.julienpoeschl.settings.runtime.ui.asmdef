@@ -1,7 +1,9 @@
 {
     "name": "com.julienpoeschl.settings.runtime.ui",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:676d0132a4b760b4ba5b66441a794eaf"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
