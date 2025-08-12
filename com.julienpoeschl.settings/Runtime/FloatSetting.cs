@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Settings
 {
-    [CreateAssetMenu(fileName = "Setting", menuName = "Setting/Float")]
+    [CreateAssetMenu(fileName = "Setting", menuName = MENU_BASE + "/Float")]
     public class FloatSetting : GenericSetting<float>
     {
         [SerializeField] private FloatRange limit;

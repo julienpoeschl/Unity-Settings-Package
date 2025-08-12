@@ -6,7 +6,7 @@ namespace Settings
     /// <summary>
     /// 
     /// </summary>
-    [CreateAssetMenu(fileName = "Setting", menuName = "Setting/Binding")]
+    [CreateAssetMenu(fileName = "Setting", menuName = MENU_BASE + "/Binding")]
     public class BindingSetting : GenericSetting<BindingData>
     {
         [SerializeField] private InputActionReference action;

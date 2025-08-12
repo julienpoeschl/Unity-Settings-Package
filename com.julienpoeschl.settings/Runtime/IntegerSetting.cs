@@ -6,7 +6,7 @@ namespace Settings
     /// <summary>
     /// 
     /// </summary>
-    [CreateAssetMenu(fileName = "Setting", menuName = "Setting/Integer")]
+    [CreateAssetMenu(fileName = "Setting", menuName = MENU_BASE + "/Integer")]
     public class IntegerSetting : GenericSetting<int>
     {
         [SerializeField] private IntegerRange limit;

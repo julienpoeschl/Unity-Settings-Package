@@ -21,6 +21,8 @@ namespace Settings
 
         public event Action<T> OnValueChanged;
 
+        protected const string MENU_BASE = "Settings";
+
 
         protected virtual void OnEnable()
         {
