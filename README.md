@@ -1,1 +1,4 @@
-Personal [Unity](https://unity.com) (Unity 6) package for global settings using Scriptable Objects. Available setting types are bool, integer and float. Additional can be written by inheriting from the generic base setting class.
+# Personal Package
+A [Unity](https://unity.com) 6 package, created using my [Unity-Package-Template](https://github.com/julienpoeschl/Unity-Package-Template), that implements a global game settings built on Scriptable Objects.
+
+For more details, read the package [documentation](com.julienpoeschl.settings/Documentation/index.md).
