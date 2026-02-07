@@ -4,16 +4,24 @@ using UnityEngine.InputSystem;
 namespace Settings
 {
     /// <summary>
+    /// Scriptable object setting for a binding (custom struct `BindingData`).
     /// 
+    /// The `SetValue` method is overwritten to check if the new value satisfies the expected properties.
+    /// 
+    /// Note: `BindingSetting` is not fully implemented yet.
     /// </summary>
-    [CreateAssetMenu(fileName = "Setting", menuName = MENU_BASE + "/Binding")]
+    [CreateAssetMenu(fileName = "BindingSetting", menuName = "Settings/Binding")]
     public class BindingSetting : GenericSetting<BindingData>
     {
         [SerializeField] private InputActionReference action;
 
+        /// <summary>
+        /// Setter that only accepts values satisfying the expected properties of this setting.
+        /// </summary>
+        /// <param name="newValue"></param>
         public override void SetValue(BindingData newValue)
         {
-            if (newValue == null)
+            if (newValue.Path == string.Empty)
             {
                 Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
                 return;
@@ -29,7 +37,7 @@ namespace Settings
     }
 
     [System.Serializable]
-    public class BindingData
+    public struct BindingData
     {
         public int Index;
         public string Path;
