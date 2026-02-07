@@ -3,10 +3,17 @@ using UnityEngine;
 
 namespace Settings
 {
+    /// <summary>
+    /// Custom editor for `FloatSetting` handling min and max values of limit,
+    /// using a slider from min to max for `defaultValue`,
+    /// making the `currentValue` property readonly and
+    /// adding a button to set the default value as current value.
+    /// </summary>
     [CustomEditor(typeof(FloatSetting))]
     public class FloatSettingEditor : Editor
     {
         private FloatSetting floatSetting;
+
         void OnEnable()
         {
             floatSetting = (FloatSetting)target;
