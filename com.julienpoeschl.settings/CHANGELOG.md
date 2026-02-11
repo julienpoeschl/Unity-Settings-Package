@@ -9,3 +9,10 @@ Initial release of unity package.
 - Abstract generic setting scriptable object base class `GenericSetting`. Every setting extends from this class. New settings can be written by extending from this as well.
 - `FloatSetting`, `StringSetting`, `IntegerSetting`, `BoolSetting` fully implemented, handling the given types of settings.
 - Custom editor scripts `FloatSettingEditor`, `StringSettingEditor`, `IntegerSettingEditor` and `BoolSettingEditor`, handling the allowed values for `defaultValue` and providing a readonly field of `currentValue` and a button to set it to the default value.
+
+## v1.0.1 (11.02.2026)
+
+Minor change to `SetValue` method.
+
+# Changes
+- Instead of returning in case of invalid new values, the `SetValue` method now throws an `ArgumentException` (`ArgumentNullException` or `ArgumentOutOfRangeException`).

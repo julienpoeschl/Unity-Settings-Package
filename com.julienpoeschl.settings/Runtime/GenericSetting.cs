@@ -15,7 +15,7 @@ namespace Settings
 
         [Tooltip("Turn on notification about value changes.")]
         [Header("Debugging")]
-        [SerializeField] private bool notify;
+        [SerializeField] protected bool notify;
 
 
         private T setValue = default;
@@ -51,9 +51,17 @@ namespace Settings
         }
         #endif
 
+        /// <summary>
+        /// Sets the value of type T. Is ment to be overridden and called with `base.SetValue` at the end of the subclass implementation.
+        /// </summary>
+        /// <param name="newValue"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public virtual void SetValue(T newValue)
         {
+            if (newValue == null) throw new ArgumentNullException();
+
             if (notify) Debug.Log("The Setting: {" + name + "} was changed from {" + setValue + "} to {" + newValue + "}.");
+            
             setValue = newValue;
             OnValueChanged?.Invoke(setValue);
         }

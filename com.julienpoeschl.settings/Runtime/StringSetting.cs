@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Settings
@@ -19,12 +20,14 @@ namespace Settings
         /// Setter that only accepts values satisfying the character limit of this setting.
         /// </summary>
         /// <param name="newValue"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void SetValue(string newValue)
         {
             if (characterLimit.Min > newValue.Length || characterLimit.Max < newValue.Length)
             {
-                Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
-                return;
+                if (notify) Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
+                
+                throw new ArgumentOutOfRangeException();
             }
 
             base.SetValue(newValue);

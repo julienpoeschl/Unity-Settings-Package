@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -19,12 +20,14 @@ namespace Settings
         /// Setter that only accepts values satisfying the expected properties of this setting.
         /// </summary>
         /// <param name="newValue"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void SetValue(BindingData newValue)
         {
             if (newValue.Path == string.Empty)
             {
-                Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
-                return;
+                if (notify) Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
+                
+                throw new ArgumentOutOfRangeException();
             }
 
             base.SetValue(newValue);

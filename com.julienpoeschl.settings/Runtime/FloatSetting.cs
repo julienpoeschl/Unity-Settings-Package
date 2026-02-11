@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Settings
@@ -19,12 +20,14 @@ namespace Settings
         /// Setter that only accepts values satisfying the float limit of this setting.
         /// </summary>
         /// <param name="newValue"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public override void SetValue(float newValue)
         {
             if (limit.Min > newValue || limit.Max < newValue)
             {
-                Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
-                return;
+                if (notify) Debug.LogError("The new value: " + newValue + " of setting: " + name + " was outside of the limit and therefore discarded.");
+                
+                throw new ArgumentOutOfRangeException();
             }
 
             base.SetValue(newValue);
