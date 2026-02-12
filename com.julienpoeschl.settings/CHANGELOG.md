@@ -1,10 +1,10 @@
-### Releases
+# Releases
 
 ## v1.0.0 (07.02.2026)
 
 Initial release of unity package.
 
-# Features
+### Features
 
 - Abstract generic setting scriptable object base class `GenericSetting`. Every setting extends from this class. New settings can be written by extending from this as well.
 - `FloatSetting`, `StringSetting`, `IntegerSetting`, `BoolSetting` fully implemented, handling the given types of settings.
@@ -14,7 +14,7 @@ Initial release of unity package.
 
 Minor change to `SetValue` method.
 
-# Changes
+### Changes
 - Instead of returning in case of invalid new values, the `SetValue` method now throws an `ArgumentException` (`ArgumentNullException` or `ArgumentOutOfRangeException`).
 
 
@@ -22,6 +22,6 @@ Minor change to `SetValue` method.
 
 Minor changes to setting hierarchy.
 
-# Changes
+### Changes
 - Addition of non-generic base class `Setting`
 - Addition of new `GenericNumericSetting`, grouping `IntegerSetting` and `FloatSetting` together, providing a `FloatValue` and `Range` property.
