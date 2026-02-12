@@ -11,10 +11,8 @@ namespace Settings
     /// The `SetValue` method is overwritten to check if the new value satisfies the limit.
     /// </summary>
     [CreateAssetMenu(fileName = "FloatSetting", menuName = "Settings/Float")]
-    public class FloatSetting : GenericSetting<float>
+    public class FloatSetting : GenericNumericSetting<float>
     {
-        [SerializeField] private Range<float> limit;
-        public Range<float> Limit => limit;
 
         /// <summary>
         /// Setter that only accepts values satisfying the float limit of this setting.

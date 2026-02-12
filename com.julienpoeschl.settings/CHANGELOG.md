@@ -16,3 +16,12 @@ Minor change to `SetValue` method.
 
 # Changes
 - Instead of returning in case of invalid new values, the `SetValue` method now throws an `ArgumentException` (`ArgumentNullException` or `ArgumentOutOfRangeException`).
+
+
+## v1.0.2 (12.02.2026)
+
+Minor changes to setting hierarchy.
+
+# Changes
+- Addition of non-generic base class `Setting`
+- Addition of new `GenericNumericSetting`, grouping `IntegerSetting` and `FloatSetting` together, providing a `FloatValue` and `Range` property.

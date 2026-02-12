@@ -8,10 +8,11 @@ namespace Settings
     /// Abstract base scriptable object for a generic setting of type T.
     /// </summary>
     /// <typeparam name="T">The type of the setting.</typeparam>
-    public abstract class GenericSetting<T> : ScriptableObject
+    public abstract class GenericSetting<T> : Setting
     {
         [Tooltip("The default value of the setting. Will be used as fallback value.")]
         [SerializeField] private T defaultValue;
+        public T DefaultValue { get { return defaultValue; } }
 
         [Tooltip("Turn on notification about value changes.")]
         [Header("Debugging")]

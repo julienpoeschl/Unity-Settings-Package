@@ -11,10 +11,8 @@ namespace Settings
     /// The `SetValue` method is overwritten to check if the new value satisfies the limit.
     /// </summary>
     [CreateAssetMenu(fileName = "IntegerSetting", menuName = "Settings/Integer")]
-    public class IntegerSetting : GenericSetting<int>
+    public class IntegerSetting : GenericNumericSetting<int>
     {
-        [SerializeField] private Range<int> limit;
-        public Range<int> Limit => limit;
 
         /// <summary>
         /// Setter that only accepts values satisfying the integer limit of this setting.
