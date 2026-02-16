@@ -1,4 +1,4 @@
-### Usage
+# Usage
 
 ## Creating a setting scriptable object
 
